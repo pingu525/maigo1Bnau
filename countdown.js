@@ -13,11 +13,11 @@ let countdown = setInterval(function(){
     const difSec  = Math.floor(remainTime / 1000) % 60
 
     //残りの日時を上書き
+    window.navigator.vibrate(150)
     document.getElementById("countdown-day").textContent  = difDay
     document.getElementById("countdown-hour").textContent = difHour
     document.getElementById("countdown-min").textContent  = difMin
     document.getElementById("countdown-sec").textContent  = difSec
-    window.navigator.vibrate(200)
 
     //指定の日時になればカウントを止める
     if(remainTime < 0) clearInterval(countdown)
