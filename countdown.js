@@ -1,8 +1,3 @@
-//バイブレーションを行う
-function play_se(){
-  navigator.vibrate(100);
-}
-
 let countdown = setInterval(function(){
     const now = new Date()  //今の日時
     const target = new Date(now.getFullYear(), now.getMonth() + 1, 19,'0','0','0') //ターゲット日時を取得
@@ -18,7 +13,7 @@ let countdown = setInterval(function(){
     const difSec  = Math.floor(remainTime / 1000) % 60
 
     //残りの日時を上書き
-    play_se()
+    window.navigator.vibrate(100);
     document.getElementById("countdown-day").textContent  = difDay
     document.getElementById("countdown-hour").textContent = difHour
     document.getElementById("countdown-min").textContent  = difMin
