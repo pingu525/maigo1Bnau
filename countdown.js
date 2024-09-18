@@ -13,7 +13,7 @@ let countdown = setInterval(function(){
     const difSec  = Math.floor(remainTime / 1000) % 60
 
     //残りの日時を上書き
-    window.navigator.vibrate(50);
+    window.navigator.vibrate(100);
     document.getElementById("countdown-day").textContent  = difDay
     document.getElementById("countdown-hour").textContent = difHour
     document.getElementById("countdown-min").textContent  = difMin
