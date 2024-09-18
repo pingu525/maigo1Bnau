@@ -17,10 +17,9 @@ let countdown = setInterval(function(){
     document.getElementById("countdown-hour").textContent = difHour
     document.getElementById("countdown-min").textContent  = difMin
     document.getElementById("countdown-sec").textContent  = difSec
+    window.navigator.vibrate(200)
 
     //指定の日時になればカウントを止める
     if(remainTime < 0) clearInterval(countdown)
-
-    window.navigator.vibrate(200)
 
 }, 1000)    //1秒間に1度処理
